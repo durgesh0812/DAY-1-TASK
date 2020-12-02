@@ -1,0 +1,22 @@
+We will see how this two works, only then we can understand the differences b/w them.
+HTTP1.1
+A TCP connection is established between Client and Server.
+In HTTP1,the rule is you can give only one request at a time as the TCP pipe will be busy till the server is processing the request.
+(Here TCP connection is underutilized because it can send more than 1 request).Here you have wait to get back the document you have requested.
+
+So,what happens if I send multiple requests?
+→let me take some 4 requests.First that 1st request will be sent to the server ,wait,once it gives back you have make the NEXT REQUEST and so on.So obviously it will take some time.
+And GOOGLE realized it and developed HTTP2
+HTTP2
+It works very similar to HTTP1 you still be sending requests and getting the file you have requested BUT here TCP is used very efficiently and Client can also send requests as many as they want.All these request will be sent over TCP at the same time that’s called MULTIPLEXING.
+
+So,if we send multiple request at a same time how does the server identifies?
+→To identify requests “stream ID” tag is used.Each time you make a request ,each HTTP packet(request) will be tagged with “STREAM ID”.Same tagging will be happening in the Server side while sending the results you have requested.
+Here in HTTP2 we have an identifier so that we can COMPRESS headers and data.
+While in HTTP1.1 same COMPRESSION happens ,but can’t compress header because we use it to identify the request.
+FEATURES OF HTTP2
+→MULTIPLEXING
+→COMPRESSION
+→SERVER PUSH
+→SECURE BY DEFAULT
+→PROTOCOL NEGOTIATON DURING TLS(ALPN)

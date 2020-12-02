@@ -1,0 +1,4 @@
+What happens when you hit a URL in the address bar?
+
+When you type an URL(Uniform Resource Locator)and hit enter , a HTTP request is sent to the server and server responds with an HTTP response ,that response contains requested URL’s homepage.
+In detail ,what happens is, when you type an URL in your browser, it goes to DNS which takes the URL and gives out the IP address and uniquely identifies the server which has the requested HTML page. Once the match is found IP address is send back to the browser. Now the browser has the IP address it is sent to ISP and it requests matched server to send the html page which will be displayed on the browser.
