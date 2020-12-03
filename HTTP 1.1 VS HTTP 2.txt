@@ -5,7 +5,7 @@ In HTTP1,the rule is you can give only one request at a time as the TCP pipe wil
 (Here TCP connection is underutilized because it can send more than 1 request).Here you have wait to get back the document you have requested.
 
 So,what happens if I send multiple requests?
-→let me take some 4 requests.First that 1st request will be sent to the server ,wait,once it gives back you have make the NEXT REQUEST and so on.So obviously it will take some time.
+→let me take some 4 requests.First that 1st request will be sent to the server ,wait,once it gives back the file you requested then you have to make the NEXT REQUEST and so on.So obviously it will take some time.
 And GOOGLE realized it and developed HTTP2
 HTTP2
 It works very similar to HTTP1 you still be sending requests and getting the file you have requested BUT here TCP is used very efficiently and Client can also send requests as many as they want.All these request will be sent over TCP at the same time that’s called MULTIPLEXING.
